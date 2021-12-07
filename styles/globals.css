@@ -7,9 +7,15 @@ html {
 }
 
 body {
-  @apply px-4 sm:w-screen lg:w-11/12 xl:w-9/12 mx-auto;
+  @apply px-4 sm:w-screen lg:w-11/12 xl:w-8/12 mx-auto;
 }
 
 .white-logo {
   fill: white
+}
+
+.cat-bg {
+  background-image: url('../public/images/HeroImagelg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

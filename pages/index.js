@@ -22,7 +22,18 @@ export default function Home({mostPopular}) {
       </Head>
 
       <Layout>
-        <section>This is just a section</section>
+        <div className="mb-24">
+          <section className="cat-bg h-main-sections rounded-t-footer flex">
+            <div className="flex flex-col justify-center items-start w-1/2 px-28">
+              <img src="./images/CatwikiWhiteLogo.svg" className="h-20 w-auto" alt="logo" />
+              <span>Get to know more about your cat breed</span>
+            </div>
+            <div className="w-1/2"></div>
+          </section>
+          <section className="h-main-sections bg-main-section rounded-b-footer">
+            
+          </section>
+        </div>
       </Layout>
     </div>
   )
