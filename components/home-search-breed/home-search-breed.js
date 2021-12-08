@@ -2,7 +2,7 @@ import { Search } from '@material-ui/icons';
 import { useEffect } from 'react';
 
 export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSuggestions}) {
-
+  
   useEffect(() => {
       document.addEventListener('click', clickOutSideHandler);
     return () => {
@@ -14,10 +14,11 @@ export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSug
   const onClickOutside = () => hideSuggestions();
   
   return (
-    <div className="w-full relative" id="autocomplete-container-element">
-      <div className="h-16 rounded-full px-5 bg-white flex items-center justify-between">
+    <div className="lg:w-full w-3/4 relative" id="autocomplete-container-element">
+      <div className=" h-10 lg:h-16 rounded-full px-5 bg-white flex items-center justify-between">
         <input type="text" 
-          className="outline-none text-xl w-full"
+          placeholder="Search"
+          className="outline-none text-sm lg:text-xl w-full"
           onChange={(e) => onTypingHandler(e.target.value)} 
           data-testid="breed-search" 
         />

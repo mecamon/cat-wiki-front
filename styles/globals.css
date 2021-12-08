@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6, p, span, small, label, input, li {
+h1, h2, h3, h4, h5, h6, p, span, small, label, input, li, a{
   font-family: 'Montserrat', sans-serif;
   color: #291507;
 }
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  @apply px-4 sm:w-screen lg:w-11/12 xl:w-8/12 mx-auto;
+  @apply px-4 sm:w-screen lg:w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto;
 }
 
 .white-logo {
@@ -25,4 +25,9 @@ body {
   background-image: url('../public/images/HeroImagelg.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.mansory {
+  column-count: 2;
+  column-gap: 2rem;
 }
