@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const getMostPopular = 
+export const GET_MOST_SEARCHED = 
     gql`
       query mostSearched {
         mostSearched {
@@ -9,6 +9,15 @@ export const getMostPopular =
           name,
           timesSearched,
           image
+        }
+      }
+    `
+export const GET_SUGGESTED = 
+    gql`
+      query search($entry: String!) {
+        search(entry: $entry) {
+          id,
+          catName
         }
       }
     `

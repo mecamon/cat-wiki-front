@@ -9,8 +9,12 @@ module.exports = {
       height: {
         'main-sections': '520px'
       },
+      maxHeight: {
+
+      },
       backgroundColor: {
-        'main-section': '#E3E1DC'
+        'main-section': '#E3E1DC',
+        'secondary':  '#979797',
       }
     },
   },

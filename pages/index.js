@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import client from '../data/gql-client';
-import { getMostPopular } from '../data/queries';
-import { useEffect } from 'react';
+import { GET_MOST_SEARCHED, GET_SUGGESTED } from '../data/queries';
+import { useEffect, useState } from 'react';
 import Layout from '../components/layout';
+import HomeSearchBreed from '../components/home-search-breed/home-search-breed';
 
 export default function Home({mostPopular}) {
+
+  const [suggestedBreeds, setSuggestedBreeds] = useState([]);
 
   useEffect(() => {
     console.log(mostPopular);
@@ -12,6 +15,22 @@ export default function Home({mostPopular}) {
       
     };
   }, []);
+
+  const hideSuggestionsHandler = () => setSuggestedBreeds([]);
+
+  const onFetchBreedsHandler = async (value) => {   
+
+    const {data, error, loading} = await client.query({
+      query: GET_SUGGESTED,
+      variables: {entry: value}
+    });
+
+    if(data) {
+      const { search } = data;
+      setSuggestedBreeds(search);
+    }
+  } 
+  
 
   return (
     <div>
@@ -26,7 +45,11 @@ export default function Home({mostPopular}) {
           <section className="cat-bg h-main-sections rounded-t-footer flex">
             <div className="flex flex-col justify-center items-start w-1/2 px-28">
               <img src="./images/CatwikiWhiteLogo.svg" className="h-20 w-auto" alt="logo" />
-              <span>Get to know more about your cat breed</span>
+              <span className="text-white text-2xl mb-14">Get to know more about your cat breed</span>
+              <HomeSearchBreed 
+                onFetchBreeds={onFetchBreedsHandler} 
+                suggestedBreeds={suggestedBreeds} 
+                hideSuggestions={hideSuggestionsHandler}/>
             </div>
             <div className="w-1/2"></div>
           </section>
@@ -41,7 +64,7 @@ export default function Home({mostPopular}) {
 
 export async function getServerSideProps() {
   const { data } = await client.query({
-    query: getMostPopular
+    query: GET_MOST_SEARCHED
   });
 
   return { 
