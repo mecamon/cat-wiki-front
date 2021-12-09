@@ -28,7 +28,9 @@ module.exports = {
       backgroundColor: {
         'main-section': '#E3E1DC',
         'secondary':  '#979797',
-        'third': '#4D270C'
+        'third': '#4D270C',
+        'fourth': '#E0E0E0',
+        'fifth': '#544439'
       },
       textColor: {
         'strong': '#291507'

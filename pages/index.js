@@ -95,7 +95,8 @@ export default function Home({mostPopular}) {
               <p className="text-lg mb-16">Having a cat around you can actually trigger the release of calming chemicals in your 
                 body which lower your stress and anxiety leves
               </p>
-              <a href="/" className="flex items-center">
+              <a href="https://www.mentalfloss.com/article/51154/10-scientific-benefits-being-cat-owner" 
+                className="flex items-center">
                 <span className="opacity-60 text-sm lg:text-lg font-bold mr-2">READ MORE</span>
                 <ArrowRightAlt style={{ fill: '#7F736A' }} fontSize="medium" />
               </a>

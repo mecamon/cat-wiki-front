@@ -1,19 +1,14 @@
 import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
 import HomePopularBreed from './home-popular-breed';
+import { popularBreed } from '../../__test__/fixtures/breed-fixtures';
 
 describe('HomePopularBreed', () => {
 
-  const breed = { 
-    id: 1, 
-    originalId: 'adcf', 
-    timesSearched: 4, 
-    name: 'Some name', 
-    image: 'http://thecatimage.net/'
-  }
+  const breed = popularBreed;
 
   beforeEach(() => {
-    render(<HomePopularBreed breed={breed} />);
+    render(<HomePopularBreed breed={popularBreed} />);
   });
 
   it('Expect to have a label with the breeds name and the image url', () => {

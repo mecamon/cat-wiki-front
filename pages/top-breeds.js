@@ -13,8 +13,8 @@ export default function TopBreeds({breeds}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h2 className=" font-bold text-xl md:text-4xl mb-12">Top 10 most searched breeds</h2>
-        <TopBreedInfoGroup breeds={breeds} />
+          <h2 className=" font-bold text-xl md:text-4xl mb-12">Top 10 most searched breeds</h2>
+          <TopBreedInfoGroup breeds={breeds} />
       </Layout>
     </div>
   );
@@ -28,6 +28,10 @@ export async function getServerSideProps() {
   const { mostSearched } = data;
 
   return {
-    props: { breeds: mostSearched }
+    props: { 
+      breeds: mostSearched < 10 
+          ? mostSearched.slice(0, 10)
+          : mostSearched
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { Search } from '@material-ui/icons';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSuggestions}) {
   
@@ -29,7 +30,9 @@ export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSug
           className="absolute bg-white rounded-3xl px-5 py-5 mt-4 w-full max-h-52 overflow-scroll">{ 
           suggestedBreeds.map(breed => 
           <li key={breed.id} data-testid="breed-suggested" className=" hover:bg-secondary rounded-xl px-3 hover:bg-opacity-10 py-3">
-            <span className="z-30 opacity-1">{breed.catName}</span>
+            <Link href={`/breed/${breed.id}`}>
+              <span className="z-30 opacity-1">{breed.catName}</span>
+            </Link>
           </li>) 
         }</ul>
       }

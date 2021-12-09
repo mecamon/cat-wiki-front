@@ -22,3 +22,26 @@ export const GET_SUGGESTED =
         }
       }
     `
+
+export const GET_BREED = 
+    gql`
+      query GetBreed($breedId: String!) {
+        getBreed(breedId: $breedId) {
+          name
+          temperament
+          strangerFriendly
+          socialNeeds
+          origin
+          lifeSpan
+          intelligence
+          healthIssues
+          grooming
+          description
+          childFriendly
+          affectionLevel
+          adaptability
+          images
+          wikipediaUrl
+        }
+      }
+    `
