@@ -7,6 +7,7 @@ export const GET_MOST_SEARCHED =
           id,
           originalId,
           name,
+          description,
           timesSearched,
           image
         }

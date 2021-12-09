@@ -76,7 +76,7 @@ export default function Home({mostPopular}) {
                 <h2 className="text-lg lg:text-5xl font-bold text-strong">66+ Breeds for you to discover</h2>
               </div>
               <div className="w-1/2 flex justify-end">
-                <Link href="/">
+                <Link href="/top-breeds">
                   <a className="flex items-center">
                     <span className="opacity-60 font-bold text-sm lg:text-lg mr-2">SEE MORE</span>
                     <ArrowRightAlt style={{ fill: '#7F736A' }} fontSize="medium" />
