@@ -22,7 +22,7 @@ body {
 }
 
 .cat-bg {
-  background-image: url('../public/images/HeroImagelg.png');
+  background-image: url('/images/HeroImagelg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
