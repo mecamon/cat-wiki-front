@@ -6,11 +6,7 @@ export default function TopBreedInfoGroup({breeds}) {
     <div>
       { breeds.map((breed, index) => 
         <div key={breed.id} data-testid="breed-info" className="mb-14">
-          <Link href={`/breed/${breed.originalId}`}>
-            <a>
-              <TopBreedInfo breed={breed} index={index} />
-            </a>
-          </Link>
+          <TopBreedInfo breed={breed} index={index} />
         </div>) 
       }
     </div>
