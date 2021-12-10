@@ -1,5 +1,4 @@
 import TopBreedInfo from "../top-breed-info/top-breed-info";
-import Link from "next/link";
 
 export default function TopBreedInfoGroup({breeds}) {
   return (
