@@ -23,7 +23,8 @@ module.exports = {
 
       },
       minHeight: {
-        'main-sections': '520px'
+        'main-sections': '520px',
+        'error-msg-area': '800px'
       },
       backgroundColor: {
         'main-section': '#E3E1DC',

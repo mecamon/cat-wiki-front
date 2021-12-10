@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import client from '../data/gql-client';
-import { GET_MOST_SEARCHED, GET_SUGGESTED } from '../data/queries';
+import { getMostSearched, getSuggested } from '../data/repo/breeds-repo';
 import { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 import HomeSearchBreed from '../components/home-search-breed/home-search-breed';
@@ -39,16 +38,8 @@ export default function Home({mostPopular}) {
   const onShowModalHandler = () => setIsShowingSearchModal(true);
 
   const onFetchBreedsHandler = async (value) => {   
-
-    const {data, error, loading} = await client.query({
-      query: GET_SUGGESTED,
-      variables: {entry: value}
-    });
-
-    if(data) {
-      const { search } = data;
-      setSuggestedBreeds(search);
-    }
+    const { results, err } = await getSuggested(value);
+    if(results) setSuggestedBreeds(results);
   } 
   
 
@@ -105,7 +96,13 @@ export default function Home({mostPopular}) {
                 </Link>
               </div>
             </div>
-            <HomePopularBreedGroup popularBreeds={mostPopular} />
+            { mostPopular 
+                ? <HomePopularBreedGroup popularBreeds={mostPopular} /> 
+                : <div className="flex flex-col justify-center">
+                    <h2 className="text-4xl opacity-40">No breeds to show</h2>
+                    <span className=" text-xl opacity-40">Please try later</span>
+                  </div>
+            }
           </section>
         </div>
         <div>
@@ -135,17 +132,16 @@ export default function Home({mostPopular}) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await client.query({
-    query: GET_MOST_SEARCHED
-  });
 
-  const {mostSearched} = data;
+  const { results, err } = await getMostSearched();
 
-  return { 
-    props: {
-      mostPopular: mostSearched.length > 4
-          ? mostSearched.slice(0, 4) 
-          : mostSearched
+  if(err) return { props: {breeds: null} }
+
+  return {
+    props: { 
+      mostPopular: results.length > 4 
+          ? results.slice(0, 4)
+          : results
     }
   }
 }
