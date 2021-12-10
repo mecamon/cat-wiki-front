@@ -66,7 +66,7 @@ export default function Home({mostPopular}) {
           <section className="cat-bg h-40 md:h-72 lg:h-main-sections rounded-t-footer flex">
             <div className="flex flex-col justify-center items-start w-2/3 lg:w-1/2 px-8 lg:px-28">
               <img 
-                src={isMobileMode ? './images/CatwikiSimpleWhiteLogo.svg' : './images/CatwikiWhiteLogo.svg'} 
+                src={isMobileMode ? '/images/CatwikiSimpleWhiteLogo.svg' : '/images/CatwikiWhiteLogo.svg'} 
                 className=" h-12 lg:h-20 w-auto" alt="logo" />
               <span className="text-white text-xs lg:text-2xl mb-4 lg:mb-14">Get to know more about your cat breed</span>
               <HomeSearchBreed 
