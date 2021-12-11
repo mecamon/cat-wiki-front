@@ -10,7 +10,7 @@ Wiki with images and relevant information about your favorite cat breeds.
 * [GIFS](#Gifs)
 * [Launch](#launch)
 * [Project status](#project-status)
-* [Link to production site](https://unplash-meca.vercel.app/)
+* [Link to production site](https://cat-wiki-front.vercel.app/)
 
 ## General info
 
