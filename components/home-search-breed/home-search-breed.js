@@ -37,11 +37,13 @@ export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSug
         <ul data-testid="breed-suggested-group" 
           className="absolute bg-white rounded-3xl px-3 py-5 mt-4 w-full max-h-52 overflow-y-scroll custom-scrollbar">{ 
           suggestedBreeds.map(breed => 
-            <Link href={`/breed/${breed.id}`}>
-              <li key={breed.id} data-testid="breed-suggested" className=" hover:bg-secondary cursor-pointer rounded-xl px-3 hover:bg-opacity-10 py-3">
-                <span className="z-30 opacity-1">{breed.catName}</span>
-              </li>
-            </Link>
+            <div  key={breed.id} >
+              <Link href={`/breed/${breed.id}`}>
+                <li data-testid="breed-suggested" className=" hover:bg-secondary cursor-pointer rounded-xl px-3 hover:bg-opacity-10 py-3">
+                  <span className="z-30 opacity-1">{breed.catName}</span>
+                </li>
+              </Link>
+            </div>
           ) 
         }</ul>
       }

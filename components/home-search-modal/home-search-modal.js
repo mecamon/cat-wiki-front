@@ -36,11 +36,13 @@ export default function HomeSearchModal({breedsSuggested, onFetchBreeds, onHideM
       <div>
         <ul className="max-h-72 overflow-y-auto custom-scrollbar">
           {breedsSuggested.map(breed => 
-            <Link href={`/breed/${breed.id}`}>
-              <li key={breed.id} data-testid="breed-suggested" className=" hover:bg-secondary rounded-xl px-3 hover:bg-opacity-10 py-3">
-                <span className="z-30 opacity- text-lg">{breed.catName}</span>
-              </li>
-            </Link>
+            <div key={breed.id}>
+              <Link href={`/breed/${breed.id}`}>
+                <li data-testid="breed-suggested" className=" hover:bg-secondary rounded-xl px-3 hover:bg-opacity-10 py-3">
+                  <span className="z-30 opacity- text-lg">{breed.catName}</span>
+                </li>
+              </Link>
+            </div>
           )}
         </ul>
       </div>
