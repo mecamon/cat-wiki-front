@@ -12,6 +12,9 @@ Wiki with images and relevant information about your favorite cat breeds.
 * [Project status](#project-status)
 * [Link to production site](https://cat-wiki-front.vercel.app/)
 
+
+
+
 ## General info
 
 This is a fullstack site created to fulfill a challenge in the site: [devchallenges.io](https://devchallenges.io/)
@@ -42,6 +45,7 @@ This is a fullstack site created to fulfill a challenge in the site: [devchallen
 * Breed details
 ![More info about a breed](./public/images/breed-details.gif)
 
+
 ## Launch
 
 run yarn dev
@@ -51,6 +55,7 @@ run yarn dev
 Version 1.0.1
 
 ```
+
 
 
 
