@@ -10,7 +10,7 @@ Wiki with images and relevant information about your favorite cat breeds.
 * [GIFS](#Gifs)
 * [Launch](#launch)
 * [Project status](#project-status)
-* [Link to production site](https://unplash-meca.vercel.app/)
+* [Link to production site](https://cat-wiki-front.vercel.app/)
 
 ## General info
 
@@ -34,13 +34,13 @@ This is a fullstack site created to fulfill a challenge in the site: [devchallen
 
 ## Gifs
 * Searching for breed
-![Searching for breed](./public/gifs/searching-breed.gif)
+![Searching for breed](./public/images/searching-breed.gif)
 
 * Most popular breeds
-![Top 10 breeds](./public/gifs/top-10.gif)
+![Top 10 breeds](./public/images/top-10.gif)
 
 * Breed details
-![More info about a breed](./public/gifs/breed-details.gif)
+![More info about a breed](./public/images/breed-details.gif)
 
 ## Launch
 
@@ -51,5 +51,6 @@ run yarn dev
 Version 1.0.1
 
 ```
+
 
 
