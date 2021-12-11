@@ -37,10 +37,10 @@ This is a fullstack site created to fulfill a challenge in the site: [devchallen
 ![Searching for breed](./public/gifs/searching-breed.gif)
 
 * Most popular breeds
-![Top 10 breeds](./public/top-10.gif)
+![Top 10 breeds](./public/gifs/top-10.gif)
 
 * Breed details
-![More info about a breed](./public/breed-details.gif)
+![More info about a breed](./public/gifs/breed-details.gif)
 
 ## Launch
 
