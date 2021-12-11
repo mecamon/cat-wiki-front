@@ -35,7 +35,7 @@ export default function HomeSearchBreed({onFetchBreeds, suggestedBreeds, hideSug
       }
       { (suggestedBreeds.length !== 0 && !isMobileMode) && 
         <ul data-testid="breed-suggested-group" 
-          className="absolute bg-white rounded-3xl px-5 py-5 mt-4 w-full max-h-52 overflow-scroll">{ 
+          className="absolute bg-white rounded-3xl px-3 py-5 mt-4 w-full max-h-52 overflow-y-scroll custom-scrollbar">{ 
           suggestedBreeds.map(breed => 
           <li key={breed.id} data-testid="breed-suggested" className=" hover:bg-secondary rounded-xl px-3 hover:bg-opacity-10 py-3">
             <Link href={`/breed/${breed.id}`}>

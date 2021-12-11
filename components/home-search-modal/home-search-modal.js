@@ -34,7 +34,7 @@ export default function HomeSearchModal({breedsSuggested, onFetchBreeds, onHideM
         <Search style={{ fill: '#291507' }} fontSize="medium" />
       </div>
       <div>
-        <ul className="max-h-72 overflow-scroll">
+        <ul className="max-h-72 overflow-y-auto custom-scrollbar">
           {breedsSuggested.map(breed => 
             <li key={breed.id} data-testid="breed-suggested" className=" hover:bg-secondary rounded-xl px-3 hover:bg-opacity-10 py-3">
               <Link href={`/breed/${breed.id}`}>

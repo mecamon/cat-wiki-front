@@ -31,3 +31,28 @@ body {
   column-count: 2;
   column-gap: 2rem;
 }
+
+.custom-scrollbar {
+  scrollbar-width: 50px;
+  scrollbar-color: transparent transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  height: 56px;
+  border: 8px solid transparent;
+  background-color: rgba(129, 135, 142, 0.81);
+  background-clip: padding-box;
+  border-radius: 9999px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
