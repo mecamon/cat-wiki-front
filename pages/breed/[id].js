@@ -27,11 +27,11 @@ export default function Breed({breedInfo}) {
 }
 
 export async function getServerSideProps({params}) {
-
   const { results, err } = await getBreed(params.id);
 
-  if(err) return { props: {breedInfo: null} }
-
+  if(err) {
+    return { props: {breedInfo: null} }
+  }
   return {
     props: { breedInfo: results }
   }

@@ -43,7 +43,9 @@ export async function getBreed(id) {
       variables: { breedId: id }
     });
 
-    if(error) return {results, err: error}
+    if(error) {
+      return {results, err: error}
+    } 
     const { getBreed } = data;
     return {results: getBreed, err}
 

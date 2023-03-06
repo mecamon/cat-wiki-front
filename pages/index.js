@@ -135,7 +135,9 @@ export async function getServerSideProps() {
 
   const { results, err } = await getMostSearched();
 
-  if(err) return { props: {breeds: null} }
+  if(err) {
+    return { props: {breeds: null} }
+  } 
 
   return {
     props: { 
